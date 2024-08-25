@@ -4,31 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainterio</title>
-    <!-- tailwind cdn -->
+    <title>Rainterio Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <!-- font-awesome -->
+    <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- custome font manrope -->
+
     <style>
         .manrope {
             font-family: "Manrope", sans-serif;
@@ -36,18 +23,14 @@
     </style>
 </head>
 
-<body class="max-w-6xl mx-auto">
-    <header class="bg-gradient-to-r from-[#FFFFFF] to-[#FFFFFF]">
-        <!-- navbar -->
-        <nav class="navbar">
-            <div class="navbar-start">
-
-                <div>
-                    <i class="fa-solid fa-arrow-right -rotate-45 text-white bg-green-500 rounded-full p-2"></i>
-                    <a class="btn btn-ghost text-xl">Rinterio</a>
-                </div>
+<body class="bg-gray-100 sm:px-5">
+    <header class="max-w-6xl mx-auto">
+        <div class="navbar">
+            <div class="navbar-start gap-2">
+                <i class="fa-solid fa-arrow-right text-white -rotate-45 bg-green-400 rounded-full p-2"></i>
+                <button class="text-3xl font-extrabold">Rinterio</button>
             </div>
-            <div class="navbar-center hidden lg:flex text-gray-600">
+            <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
                     <li><a>Home</a></li>
                     <li><a>Services</a></li>
@@ -56,90 +39,45 @@
                     <li><a>Contact Us</a></li>
                 </ul>
             </div>
-            <div class="navbar-end">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm  dropdown-content text-gray-400  rounded-box z-[1] mt-3 w-52  shadow">
-                        <li><a>Home</a></li>
-                        <li><a>Services</a></li>
-                        <li><a>Portfolio</a></li>
-                        <li><a>Blogs</a></li>
-                        <li><a>Contact Us</a></li>
-                    </ul>
-                </div>
+            <div class="navbar-end gap-2">
+                    <div class="dropdown dropdown-end lg:hidden">
+                        <div tabindex="0" role="button" class="btn m-1"><i class="fa-solid fa-bars"></i></div>
+                        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>Blogs</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                      </div>
+                
                 <div class="hidden lg:block">
                     <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-cart-shopping  bg-white rounded-full p-2"></i>
                         <i class="fa-solid fa-magnifying-glass bg-white rounded-full p-2"></i>
-                        <div class="flex gap-3 items-center bg-green-500 md:px-5 md:py-3 rounded-full border-none">
-                            <small class="text-xl font-extrabold">Book Consult</small>
-                            <i class="fa-solid fa-arrow-right -rotate-45 text-white bg-black rounded-full p-2"></i>
+                        <i class="fa-solid fa-cart-shopping bg-white rounded-full p-2"></i>
+                        <div class="bg-[#ABEF5F] rounded-full py-2 px-4">
+                            <button class="text-xl font-extrabold">Book Consult <i
+                                    class="fa-solid fa-arrow-right text-white -rotate-45 bg-black rounded-full p-2"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
-        <!-- end of navbar -->
+        </div>
 
         <!-- banner -->
-        <div class="text-center">
+         <div>
             <div class="flex justify-center">
                 <img src="assets/banner.png" alt="">
             </div>
-            <h2 class="text-3xl mb-4 md:text-6xl md:mb-6 font-extrabold ">A barn house of this design has a striking
-                appearance</h2>
-            <p class="text-sm md:text-base mb-4 md:mb-8 max-w-4xl mx-auto">The barn house captivates with its blend of
-                rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows
-                that flood the space with natural light.</p>
-            <button class="bg-green-300 rounded-full px-6 py-3 font-bold text-xl">View Details <i
-                    class="fa-solid fa-arrow-right -rotate-45 text-white bg-green-500 rounded-full p-2"></i></button>
-        </div>
-    </header>
-    <main>
-        <!-- we design -->
-        <div class="hero bg-base-200 min-h-screen">
-            <div class="hero-content flex items-center ">
-                <div>
-                    <div>
-                        <h1 class="text-5xl font-bold">We design thoughtful, liveable spaces</h1>
-                        <p class="py-6">
-                            The barn house captivates with its blend of rustic charm and
-                            modern sophistication, featuring weathered wood, sleek metal accents.
-                        </p>
-                    </div>
-                    <div class="flex gap-3 items-center bg-white mb-6 rounded-xl p-6">
-                        <img src="assets/commercial.png" alt="">
-                        <div>
-                            <h2 class="text-xl font-extrabold mb-2">Commercial</h2>
-                            <p class="text-base font-medium">The barn house captivates with its blend of rustic charm
-                                and modern.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-3 items-center bg-white mb-6 rounded-xl p-6">
-                        <img src="assets/residential.png" alt="">
-                        <div>
-                            <h2 class="text-xl font-extrabold mb-2">Residential</h2>
-                            <p class="text-base font-medium">The barn house captivates with its blend of rustic charm
-                                and modern.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-1/2">
-                    <img src="assets/article3.png" class="rounded-lg shadow-2xl"/>
-                </div>
+            <div class="text-center">
+                <h2 class="text-3xl lg:text-6xl font-extrabold">A barn house of this design has a striking appearance</h2>
+                <p class="font-medium lg:px-28 mb-5 mt-4 lg:mt-6 lg:mb-8">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
             </div>
-        </div>
-    </main>
-    <footer>
+         </div>
+        </header>
+        <main>
 
-    </footer>
+        </main>
 </body>
 
 </html>
